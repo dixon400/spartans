@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Cars from "./components/carList/Cars";
+import Nav from "./components/nav/Nav";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ContactForm from "./components/contactForm/ContactForm";
+import About from "./components/about/About";
+import CarDetail from "./components/carDetail/CarDetail";
+import Allan from "./components/Allan";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Nav />
+      <Routes>
+        <Route path="/allan" exact element={<Allan />}/>
+        <Route path="/cars"  element={<Cars />}/>
+        <Route path="/cars/:id" element={<CarDetail />}/>
+        <Route path="/contactUs" element={<ContactForm />}/>
+        <Route path="/aboutus" element={ <About />}/>  
+      </Routes>
+    </Router>
   );
 }
 

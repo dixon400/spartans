@@ -1,0 +1,17 @@
+.navList {
+    list-style-type: none;
+    display: flex;  
+}
+
+li {
+    margin: 1rem;
+}
+.nav {
+    padding: 0 1rem;
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background: black;
+}

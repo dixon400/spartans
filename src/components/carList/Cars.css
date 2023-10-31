@@ -1,0 +1,9 @@
+.inst {
+    color: brown;
+}
+
+.carsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
